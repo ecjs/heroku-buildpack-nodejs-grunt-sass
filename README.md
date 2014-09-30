@@ -37,12 +37,23 @@ Usage
 -----
 
 Create a new app with this buildpack:
+=======
+Documentation
+-------------
+
+For more information about using Node.js and buildpacks on Heroku, see these Dev Center articles:
+
+- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
+- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/nodejs)
+- [10 Habits of a Happy Node Hacker](https://blog.heroku.com/archives/2014/3/11/node-habits)
+- [Buildpacks](https://devcenter.heroku.com/articles/buildpacks)
+- [Buildpack API](https://devcenter.heroku.com/articles/buildpack-api)
 
     heroku create myapp --buildpack heroku config:add BUILDPACK_URL=https://github.com/stephanmelzer/heroku-buildpack-nodejs-grunt-compass.git
 
 Or add this buildpack to your current app:
 
-    heroku config:add BUILDPACK_URL=https://github.com/stephanmelzer/heroku-buildpack-nodejs-grunt-compass.git
+    heroku config:add BUILDPACK_URL=https://github.com/lmb/heroku-buildpack-nodejs-grunt-sass.git
 
 Set the `NODE_ENV` environment variable (e.g. `development` or `production`):
 
@@ -66,6 +77,7 @@ Don't forget to add grunt to your dependencies in `package.json`. If your grunt 
     }
 
 Push to heroku
+=======
 
     git push heroku master
     ...
